@@ -1,0 +1,89 @@
+---
+title: "Lab01"
+format:
+  html:
+    toc: true
+    code-fold: show
+    embed-resources: true
+engine: jupyter
+---
+
+Vamos agora brincar de séries temporais.
+
+Um problema que precisamos enfrentar com séries temporais é que como os dados têm uma ordem, precisamos de alguma forma ter essa ordem escrita na base.
+
+Além disso, a ordem é pelo tempo, que é algo que tras informação por si só. Por exemplo, se estamos com uma série temporal de vendas, é natural pensar que certas épocas do ano vendam mais que outras, e que isso se repita ano a ano.
+
+Por isso, uma base de dados de série temporal precisa saber lidar com essa natureza de dados.
+
+# Bases de dados
+
+Existem diversos pacotes utilizados para armazenar séries temporais no R. Veremos 3:
+
+-   `{base}`: dá para fazer muita coisa só com o base/stats, então você verá bastante código desse tipo por aí.
+
+-   `{xts}` / `{zoo}`: serve para organizar uma base de dados no formato de série temporal.
+
+-   `{tsibble}`: é a versão *tidy*, mais recente (2017).
+
+## Base R
+
+Historicamente, isso era feito pela função `ts()`, que funciona assim:
+
+
+```{r}
+
+set.seed(1)
+
+dados <- data.frame(
+  mes = 1:48,
+  vendas = arima.sim(list(order = c(1, 1, 0), ar = 0.7), n = 48)[-1]
+)
+
+plot(dados)
+
+```
+
+```{r}
+
+dados_ts <- ts(dados)
+
+plot(dados_ts)
+```
+
+```{python}
+
+import pandas as pd
+from datetime import timedelta
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dados = pd.read_csv(
+  "https://github.com/padsInsper/202307-fa/raw/main/dados_lab01.csv"
+)
+
+#dados.plot()
+dados.info()
+sns.lineplot(data = dados, x='mes', y='vendas')
+
+```
+
+## xts/zoo
+
+
+## tsibble
+
+Se tivéssemos um formato de datas na nossa base, seria assim:
+
+# Descritivas
+
+## Decomposição
+
+## ACF e PACF
+
+usando base R e forecast
+
+agora em tsibble
+
+Decomposição
+
