@@ -33,15 +33,15 @@ Laboratórios de Financial Analytics. Plano inicial:
   - Modelos de volatilidade (ARCH/GARCH)
   - Validação cruzada em modelos de volatilidade
 
-- **Lab 4.1 (22/11, 20h-22h)**
+- **Lab 4.1 (22/11, 20h-22h, presencial)**
   - Fronteira eficiente, CAPM, VaR
   - Exercícios sobre montar carteira
 
-- **Lab 4.2 (23/11, 8h-10h)**
+- **Lab 4.2 (23/11, 8h-10h, presencial)**
   - Exercícios sobre montar carteira
   - Tópicos
 
-- **Lab 5 (29/11, 18h-22h, presencial)**:
+- **Lab 5 (29/11, 19h-22h30, remoto)**:
   - Tópicos
   - Tempo para fazer trabalho final
 
